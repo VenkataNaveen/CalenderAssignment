@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <style>
+    #section1 {
+        width: 27%;
+        height: 17%;
+        
+        margin-top: 200px;
+        margin-left: 500px;
+    }
+    
+   #part1 {
+        background-color: yellow;
+        width: 30%;
+        height: 100%;
+        color: white;
+        
+        text-align: center;
+        float: left;
+    }
+    
+    #part2 {
+        background-color: green;
+        width: 70%;
+        height: 100%;
+    
+        text-align: center;
+        float:right;
+    } 
+    #parta{
+        width: 100%;
+        height: 50%;
+        background-color: red;
+    }
+     #partb{
+        width: 100%;
+        height: 50%;
+        background-color: pink;
+    }
+
+    </style>
+    <script type="text/javascript">
+   
+    function fun1()
+    {
+        var month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        var week=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        var d=new Date();
+        var date=d.getDate();
+        var day=d.getDay();
+        var mon=d.getMonth();
+        var h=d.getHours();
+        var min=d.getMinutes();
+        var am="AM"
+        if(h>12){
+            am="pm";
+        }
+
+        document.getElementById("p1").innerHTML= date+" "+ month[mon];
+        document.getElementById("p2").innerHTML= week[day];
+         document.getElementById("p3").innerHTML= h;
+         document.getElementById("p5").innerHTML= min+"  "+am;
+    }
+
+   
+   
+
+
+
+    </script>
+</head>
+
+<body onload="fun1()">
+    <div id="demo" style="width: 100%; height: 100%;">
+        <div id="section1">
+           <div id="part1">
+            <div id="parta"><span id="p1" style="font-size:25px; padding:7px;"></span></div>
+            <div id="partb"><span id="p2" style="font-size:25px; padding:7px;"></span></div>
+
+
+
+           </div>
+           <div id="part2"><span id="p3" style="font-size:60px;"></span><span id="p4" style="font-size:60px;opacity:0.7;">:</span><span id="p5" style="font-size:60px;"></span></div>
+        </div>
+    </div>
+</body>
+
+</html>

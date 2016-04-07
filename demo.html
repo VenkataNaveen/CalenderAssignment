@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function fun1()
+{
+
+	var d=new Date();
+
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var str=d.toDateString();
+	document.getElementById("p1").innerHTML= h+":"+m;
+	document.getElementById("p2").innerHTML= str;
+
+
+}
+
+
+
+</script>
+
+
+</head>
+<body onload="fun1()">
+<h1>      This is heading</h1>
+	<div >
+
+		<p id="p1"></p>
+		<p id="p2"></p>
+	</div>
+
+
+</body>
+
+
+</html>

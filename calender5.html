@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <style>
+    #section1 {
+        width: 10%;
+        height: 27%;
+        margin-top: 200px;
+        margin-left: 500px;
+    }
+    
+    #part1 {
+        background-color: yellow;
+        width: 100%;
+        height: 70%;
+        color: red;
+        padding-top: 5px;
+        text-align: center;
+    }
+    
+    #part2 {
+        background-color: green;
+        width: 100%;
+        height: 30%;
+        padding-top: 10px;
+        text-align: center;
+    }
+    </style>
+    <script type="text/javascript">
+    function fun1() {
+        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+        var d = new Date();
+        var mon = d.getMonth();
+        var yr = d.getFullYear();
+        var dt = d.getDate();
+        var day = d.getDay();
+        var h = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+        var am = "AM";
+        if (h > 12) {
+            am = "PM";
+        }
+        document.getElementById("p1").innerHTML = month[mon] + " " + yr;
+        document.getElementById("p2").innerHTML = dt;
+        document.getElementById("p3").innerHTML = week[day]
+        document.getElementById("p4").innerHTML = h + ":" + min + ":" + sec + " " + am;
+
+
+
+    }
+    </script>
+</head>
+
+<body onload="fun1()">
+    <div id="demo" style="width: 100%; height: 100%;">
+        <div id="section1">
+            <div id="part1"><span id="p1"></span>
+                <br><span id="p2" style="font-size:60px;"></span>
+                <br><span id="p3"></span>
+                <br>
+            </div>
+            <div id="part2"><span id="p4"></span></div>
+        </div>
+    </div>
+</body>
+
+</html>
